@@ -2,9 +2,9 @@
 	<div class="col-md-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<p class="panel-title">Manage all users
+				<p class="panel-title">Manage data
 					<button class="btn btn-success" onclick="create()"><i class="glyphicon glyphicon-plus"></i>
-						Add New User
+						Add New data
 					</button>
 				</p>
 			</div>
@@ -78,6 +78,8 @@
 	}
 </style>
 
+
+<!-- 
 <script>
 
 	function reload_table() {
@@ -88,7 +90,7 @@
 	function create() {
 
 		$("#modal_data").empty();
-		$('.modal-title').text('Add New User'); // Set Title to Bootstrap modal title
+		$('.modal-title').text('Add Data'); // Set Title to Bootstrap modal title
 
 		$.ajax({
 			type: 'POST',
@@ -153,8 +155,8 @@
 			});
 		});
 	});
-</script>
-<script type="text/javascript">
+</script> -->
+<!-- <script type="text/javascript">
 
 	$(document).ready(function () {
 		$("#manage_all").on("click", ".delete", function () {
@@ -270,4 +272,4 @@
         $('[data-toggle="tooltip"]').tooltip();
 
     });
-</script>
+</script> -->

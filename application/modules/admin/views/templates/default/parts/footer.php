@@ -1,5 +1,5 @@
 <div class="pull-right hidden-xs">
-	<b>Developed by </b> <a href="#">Riyadh Ahmed</a>
+	<b>Developed by </b> <a href="#">Azizah</a>
 </div>
 <strong>Copyright &copy; <?php echo date( 'Y' ) ?> .</strong> All rights reserved.
 

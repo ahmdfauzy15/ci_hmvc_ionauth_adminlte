@@ -2,7 +2,7 @@
     <div class="container-login100">
         <div class="wrap-login100">
             <div class="login100-form-title"
-                 style="background-image: url('<?php echo base_url(); ?>assets/login/images/bg-01.jpg');">
+                 style="background-image: url('<?php echo base_url(); ?>assets/login/images/data_load.gif');">
 					<span class="login100-form-title-1">
 						Sign In
 					</span>

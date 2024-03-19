@@ -10,6 +10,25 @@
         <?php if ($this->ion_auth->is_admin()): ?>
             <li class="treeview">
                 <a href="#">
+                    <i class="fa fa-edit"></i>
+                    <span>add data</span><i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="treeview">
+                        <a href="<?php echo site_url('admin/add_data/'); ?>">
+                            <i class="fa fa-edit"></i> <span>add data</span>
+                        </a>
+                    </li>
+                    
+                    <li class="treeview">
+                        <a href="<?php echo site_url('admin/user_groups/'); ?>">
+                            <i class="fa fa-edit"></i> <span>add data by csv</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>             
+            <li class="treeview">
+                <a href="#">
                     <i class="fa fa-users"></i>
                     <span>User Management</span><i class="fa fa-angle-left pull-right"></i>
                 </a>
@@ -24,13 +43,11 @@
                             <i class="fa fa-edit"></i> <span>Manage Groups</span>
                         </a>
                     </li>
+                   
                 </ul>
-            </li>            
-			<li class="treeview">
-               <a href="<?php echo site_url('admin/settings/index'); ?>">
-                   <i class="fa fa-cogs"></i> <span>Settings</span>
-               </a>
-           </li>
+            </li> 
+            
+			
         <?php endif; ?>
     </ul>
 </section>

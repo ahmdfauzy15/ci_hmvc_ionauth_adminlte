@@ -1,7 +1,7 @@
 <!-- Logo -->
 <a href="<?php echo site_url( 'admin/dashboard' ); ?>" class="logo">
 	<!-- mini logo for sidebar mini 50x50 pixels -->
-	<span class="logo-mini">AP</span>
+	<span class="logo-mini">DATA</span>
 	<!-- logo for regular state and mobile devices -->
 	<span class="logo">Dashboard </span>
 </a>
@@ -15,12 +15,12 @@
 	<div class="navbar-custom-menu">
 		<ul class="nav navbar-nav">
 			<!-- User Account: style can be found in dropdown.less -->
-            <li class="dropdown messages-menu">
+            <!-- <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fa-envelope-o"></i>
                     <span class="label label-danger" id="notification"></span>
                 </a>
-            </li>
+            </li> -->
 			<li class="dropdown user user-menu">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 					<i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -28,10 +28,10 @@
 				<ul class="dropdown-menu">
 					<li class="user-header">
 					 <h4 style="color: #fff;font-weight: bold;text-transform:uppercase;display:inline-block;">                        
-                        <?php echo $_SESSION['settings_data']['settings_name']; ?>
+                        <?php echo('ADMIN KOMINFO')?>
                      </h4>
-					 <p><?php echo $_SESSION['settings_data']['settings_email']; ?></p>
-					 <p><?php echo $_SESSION['settings_data']['settings_contact']; ?></p>
+					 <p>Profile page</p>
+					 <p>62865983283293</p>
 					</li>
 					<li class="user-footer">
 						<div class="pull-left">

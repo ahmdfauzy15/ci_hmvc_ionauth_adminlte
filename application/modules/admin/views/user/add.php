@@ -1,5 +1,4 @@
-<form id='create' action="" enctype="multipart/form-data" method="post"
-      accept-charset="utf-8">
+<form id='create' action="" enctype="multipart/form-data" method="post"accept-charset="utf-8">
 	<div class="box-body">
 		<div id="status"></div>
 		<div class="form-group col-md-4 col-sm-12">
@@ -158,4 +157,7 @@
 		});                    // <- end '.validate()'
 
 	});
+	
 </script>
+<script src="<?php echo base_url('assets/js/jquery.min.js')?>"></script>
+<script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
