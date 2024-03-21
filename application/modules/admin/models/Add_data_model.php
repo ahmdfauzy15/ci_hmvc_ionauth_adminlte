@@ -38,24 +38,19 @@ class Add_data_model extends CI_Model
    // get a record by id
    public function get_by_id($id)
    {
-      $this->db->select('*')
-        ->from($this->_table)
-        ->where($this->primary_key, $id);
-      $query = $this->db->get();
-      if ($query->num_rows() != 0) {
-         return $query->result_array();
-      } else {
-         return false;
-      }
-   }
-   public function get_data_by_id($id) {
-      $query = $this->db->get_where('data_transaksi', array('id' => $id));
+      $this ->db->where('id', $id);
+      $query = $this->db->get('data_transaksi');
       return $query->row();
-  }
+   
+   }
+//    public function get_data_by_id($id) {
+//       $query = $this->db->get_where('data_transaksi', array('id' => $id));
+//       return $query->row();
+//   }
 
   public function update_data($id, $data) {
       $this->db->where('id', $id);
-      return $this->db->update('data_transaksi', $data);
+      $this->db->update('data_transaksi', $data);
   }
 
 //    public function get_data_by_id($id) {

@@ -79,7 +79,7 @@
 </style>
 
 
-<!-- 
+
 <script>
 
 	function reload_table() {
@@ -155,47 +155,47 @@
 			});
 		});
 	});
-</script> -->
-<!-- <script type="text/javascript">
+</script> 
+<script type="text/javascript">
 
-	$(document).ready(function () {
-		$("#manage_all").on("click", ".delete", function () {
-			var id = $(this).attr('id');
-			swal({
-				title: "Are you sure?",
-				text: "You will not be able to recover this record!",
-				type: "warning",
-				showCancelButton: true,
-				closeOnConfirm: false,
-				showLoaderOnConfirm: true,
-				confirmButtonClass: "btn-danger",
-				confirmButtonText: "Yes, delete it!"
-			}, function () {
-				$.ajax({
-					type: 'POST',
-					url: BASE_URL + 'admin/user/delete',
-					dataType: 'json',
-					data: 'id=' + id,
-					success: function (data) {
+$(document).ready(function () {
+	$("#manage_all").on("click", ".delete", function () {
+		var id = $(this).attr('id');
+		swal({
+			title: "Are you sure?",
+			text: "You will not be able to recover this record!",
+			type: "warning",
+			showCancelButton: true,
+			closeOnConfirm: false,
+			showLoaderOnConfirm: true,
+			confirmButtonClass: "btn-danger",
+			confirmButtonText: "Yes, delete it!"
+		}, function () {
+			$.ajax({
+				type: 'POST',
+				url: BASE_URL + 'admin/user/delete',
+				dataType: 'json',
+				data: 'id=' + id,
+				success: function (data) {
 
-						if (data.type === 'success') {
+					if (data.type === 'success') {
 
-							swal("Done!", "It was succesfully deleted!", "success");
-							reload_table();
+						swal("Done!", "It was succesfully deleted!", "success");
+						reload_table();
 
-						} else if (data.type === 'danger') {
+					} else if (data.type === 'danger') {
 
-							swal("Error deleting!", "Please try again", "error");
-
-						}
-					},
-					error: function (xhr, ajaxOptions, thrownError) {
 						swal("Error deleting!", "Please try again", "error");
+
 					}
-				});
+				},
+				error: function (xhr, ajaxOptions, thrownError) {
+					swal("Error deleting!", "Please try again", "error");
+				}
 			});
 		});
 	});
+});
 
 </script>
 <script>
@@ -272,4 +272,4 @@
         $('[data-toggle="tooltip"]').tooltip();
 
     });
-</script> -->
+</script> 

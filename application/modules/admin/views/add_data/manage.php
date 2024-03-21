@@ -47,7 +47,7 @@
                                         <td><?php echo $row->jumlah_diterima; ?></td>
                                         <td><?php echo $row->keterangan; ?></td>
                                         <td><?php echo $row->jenis_spj; ?></td>
-                                        <td style='text-align:center;'><a data-toggle='tooltip' class='btn btn-primary btn-xs edit'  id='" . $id . "' title='Edit' onclick="edit()"> <i class='fa fa-pencil-square-o' onclick="update()"></i> </a>
+                                        <td style='text-align:center;'><a data-toggle='tooltip' class='btn btn-primary btn-xs edit'  id='" . $id . "' title='Edit'> <i class='fa fa-pencil-square-o'></i> </a>
 				                        <a data-toggle='tooltip' class='btn btn-danger btn-xs  delete'  id='" . $id . "' title='Delete'> <i class='fa fa-trash-o'></i> </a></td>
                                     </tr>
 
@@ -117,7 +117,7 @@
 
 </style>
 
-<script>
+<!-- <script>
     // Fungsi untuk menampilkan form edit
     function edit(id) {
         // Mengirimkan permintaan AJAX untuk mendapatkan data yang akan diedit
@@ -163,7 +163,7 @@
             }
         });
     }
-</script>
+</script> -->
 
 <script>
 
@@ -187,7 +187,32 @@
 	}
 
 </script>
+
 <script type="text/javascript">
+	$(document).ready(function () {
+		$("#manage_all").on("click", ".edit", function () {
+
+			$("#modal_data").empty();
+			$('.modal-title').text('Edit User'); // Set Title to Bootstrap modal title
+
+			var id = $(this).attr('id');
+
+			$.ajax({
+				url: BASE_URL + 'admin/add_data/edit_form',
+				type: 'POST',
+				data: 'id=' + id,
+				success: function (msg) {
+					$("#modal_data").html(msg);
+					$('#modalUser').modal('show'); // show bootstrap modal
+				},
+				error: function (result) {
+					$("#modal_data").html("Sorry Cannot Load Data");
+				}
+			});
+		});
+	});
+</script>
+<!-- <script type="text/javascript">
     $(document).ready(function () {
         $("#manage_all").on("click", ".edit", function () {
             var id = $(this).closest('tr').find('td:first').text(); // Mendapatkan id dari kolom pertama di baris tabel
@@ -209,4 +234,4 @@
             });
         });
     });
-</script>
+</script> -->
